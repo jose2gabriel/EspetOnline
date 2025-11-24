@@ -81,9 +81,7 @@ button:hover {
     border-radius: 5px;
 }
 
-/* ===============================
-   ESTILO ESPECÍFICO: GARÇOM
-================================= */
+
 .garcom-container {
     max-width: 500px;
     margin: auto;
@@ -97,4 +95,135 @@ button:hover {
 .garcom-container p {
     font-size: 18px;
     color: #444;
+}
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-voltar:hover {
+    background-color: #222;
+}
+
+.panel {
+  max-width: 900px;
+  margin: 24px auto;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  color: #333;
+  font-size: 20px;
+}
+
+/* ===== Tela do Garçom ===== */
+.garcom-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.garcom-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.garcom-form input[type="text"],
+.garcom-form input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 180px;
+}
+
+.garcom-form button {
+  padding: 10px 16px;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.garcom-form button:hover { filter: brightness(0.95); }
+
+.pedidos-concluidos {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.pedidos-concluidos ul { padding: 0; list-style: none; }
+.pedidos-concluidos li {
+  background: #f0fff4;
+  border: 1px solid #e1f3e8;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== Tela da Cozinha ===== */
+.cozinha-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.pedido-card {
+  background: #fff9f4;
+  border: 1px solid #ffe6cc;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.pedido-card .meta {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.pedido-card .item {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.pedido-card form { display:inline-block; }
+.pedido-card button {
+  padding: 8px 12px;
+  background: #2d8f2d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pedido-card button:hover { filter: brightness(0.95); }
+
+/* ===== Mensagens ===== */
+.msg { color: #2d8f2d; margin-top: 12px; }
+.erro { color: #c0392b; margin-top: 12px; }
+
+/* ===== Responsivo ===== */
+@media (max-width: 520px) {
+  .garcom-form input[type="text"],
+  .garcom-form input[type="number"] { width: 100%; }
+  .panel { padding: 12px; margin: 12px; }
 }

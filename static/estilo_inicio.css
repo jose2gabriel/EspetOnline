@@ -1,0 +1,5 @@
+/* teste simples */
+body { margin:0; background:#111; color:#fff; }
+.logo-grande { width:100%; height:60vh; object-fit:cover; display:block; }
+.btn-login { position: absolute; top:16px; right:16px; background:#ff6600; padding:10px 14px; color:#fff; text-decoration:none; border-radius:6px; }
+.cardapio-full { width:100%; height:40vh; object-fit:cover; display:block; }

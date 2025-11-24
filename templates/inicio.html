@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EspetOnline - Início</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Container da logo -->
+    <div class="hero">
+
+        <!-- Botão de Login no canto superior direito -->
+        <a href="{{ url_for('login') }}" class="btn-login">Login</a>
+
+        <!-- Logo grande -->
+        <img src="{{ url_for('static', filename='img/logo.png') }}" 
+             alt="Logo EspetOnline" class="logo-grande">
+
+    </div>
+
+    <!-- Imagem do cardápio ocupando a tela toda -->
+    <img src="{{ url_for('static', filename='img/cardapio.png') }}" 
+         alt="Cardápio" class="cardapio-full">
+
+</body>
+</html>
