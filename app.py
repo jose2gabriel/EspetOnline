@@ -3,10 +3,10 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 # Usuário e senha fixos para teste
-USUARIO = "isabele"
+USUARIO = "isabele@gmail.com"
 SENHA = "1234"
 
-USUARIO2 = "isa"
+USUARIO2 = "isa@gmail.com"
 SENHA2 = "1234"
 
 # Lista onde os pedidos serão armazenados
@@ -31,7 +31,7 @@ def login():
 
         # login de usuário
         if usuario == USUARIO and senha == SENHA:
-            return redirect(url_for("home"))
+            return redirect(url_for("inicio"))
 
         # login de admin
         if usuario == USUARIO2 and senha == SENHA2:
@@ -51,9 +51,7 @@ def login():
 
     return render_template("login.html", erro=erro)
 
-@app.route("/home")
-def home():
-    return render_template("home.html")
+
 
 @app.route("/admin", methods=["GET", "POST"])
 def admin():
@@ -129,6 +127,11 @@ def cozinha():
     pendentes = [p for p in pedidos if p["status"] == "pendente"]
 
     return render_template("cozinha.html", pendentes=pendentes)
+
+@app.route("/menu")
+def menu():
+    return render_template("menu.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
